@@ -1,6 +1,7 @@
 # Ernst Fanfan
-# Data structure to hold data for all people in the game
+# Data structure to hold data for all characters in the game
 # 5/27/2021
+# Person class
 from dataclasses import dataclass, asdict
 from Testing.Testing import ob
 
