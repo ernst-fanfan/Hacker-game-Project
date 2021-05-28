@@ -5,6 +5,7 @@
 from dataclasses import dataclass, field
 from Testing.Testing import ob
 
+
 ############################################
 # Character classes
 # @ob
@@ -40,6 +41,7 @@ class Player:
 
 ######################################################
 # Systems
+@ob
 @dataclass()
 class Systems:
     localhost: int = 0
