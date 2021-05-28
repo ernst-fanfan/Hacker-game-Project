@@ -44,6 +44,8 @@ class Player:
 @ob
 @dataclass()
 class Systems:
+    user_id: str
+    password: str
     localhost: int = 0
     vote: int = 0
     state: int = 0
