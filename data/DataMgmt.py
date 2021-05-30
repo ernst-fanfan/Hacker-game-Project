@@ -1,5 +1,5 @@
 # Ernst Fanfan
-# Data structure to hold data in the game
+# Data structures to hold data in the game
 # 5/27/2021
 
 from dataclasses import dataclass, field
@@ -16,14 +16,14 @@ class Person:
     dob: str
 
 
-@ob
+# @ob
 @dataclass(frozen=True, order=True)
 class CompanyPeople(Person):
     title: str
     company: str
 
 
-@ob
+# @ob
 @dataclass(frozen=True, order=True)
 class GovernmentPeople(Person):
     title: str
@@ -32,7 +32,7 @@ class GovernmentPeople(Person):
 
 #######################################################
 # Player level and logs
-@ob
+# @ob
 @dataclass()
 class Player:
     level: int = 1
@@ -41,13 +41,18 @@ class Player:
 
 ######################################################
 # Systems
-@ob
+# @ob
 @dataclass()
 class Systems:
     user_id: str
     password: str
-    localhost: int = 0
-    vote: int = 0
-    state: int = 0
-    mail: int = 0
+    programs: list = field(default_factory=list)
+    files: list = field(default_factory=list)
+
+
+######################################################
+# Programs
+@dataclass()
+class Programs:
+    name: str
     files: list = field(default_factory=list)
