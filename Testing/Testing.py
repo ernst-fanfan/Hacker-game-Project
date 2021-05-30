@@ -9,4 +9,16 @@ def ob(ob_func):
         print(obj)
         print("End of Testing")
         return obj
+
+    return wrapper
+
+
+def func_tester(func):
+    def wrapper(*args, **kwargs):
+        print("Testing Function")
+        result = func(*args, **kwargs)
+        print(result)
+        print("End of Testing")
+        return result
+
     return wrapper
